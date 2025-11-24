@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recicladora Green Resources - Soluciones ecológicas responsables para un futuro sostenible. Reduce residuos, salva el planeta, crea un futuro verde.">
+    <meta name="keywords" content="reciclaje, sostenibilidad, medio ambiente, recicladora, soluciones ecológicas">
+    <meta name="author" content="Green Resources">
+    <meta name="theme-color" content="#5B4BFF">
+    <title>Términos de Servicio | Recicladora Green Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B68FF 100%);
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(135deg, #00E5A8 0%, #00D494 100%);
+        }
+        
+        .text-primary {
+            color: #5B4BFF;
+        }
+        
+        .text-accent {
+            color: #00E5A8;
+        }
+        
+        .bg-soft-lavender {
+            background-color: #EEF0FF;
+        }
+        
+        .bg-primary {
+            background-color: #5B4BFF;
+        }
+        
+        .bg-accent {
+            background-color: #00E5A8;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4B3BEF;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.3);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #5B4BFF;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #5B4BFF;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #EEF0FF;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.15);
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-icon.rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            transition: all 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .faq-answer:not(.hidden) {
+            max-height: 500px;
+            padding-top: 16px;
+        }
+        
+        .faq-answer.hidden {
+            display: none;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #F8F9FF 0%, #EEF0FF 100%);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .star-rating {
+            display: flex;
+            gap: 4px;
+            color: #FFD700;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            line-height: 1.75;
+        }
+        
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background-color: #EEF0FF;
+        }
+        
+        .icon-box svg {
+            width: 28px;
+            height: 28px;
+            color: #5B4BFF;
+            stroke-width: 1.5;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.95) 0%, rgba(123, 104, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=600&fit=crop') center/cover;
+            background-blend-mode: overlay;
+            color: white;
+        }
+        
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease-out;
+        }
+        
+        .footer-link:hover {
+            color: #5B4BFF;
+        }
+
+        .policy-content {
+            max-width: 4xl;
+        }
+
+        .policy-section {
+            margin-bottom: 2rem;
+        }
+
+        .policy-section h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .policy-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .policy-section p {
+            color: #666;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            list-style: disc;
+            margin-left: 2rem;
+            color: #666;
+            line-height: 1.75;
+        }
+
+        .policy-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-section ol {
+            list-style: decimal;
+            margin-left: 2rem;
+            color: #666;
+            line-height: 1.75;
+        }
+
+        .policy-section ol li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container mx-auto max-w-7xl px-8 md:px-16 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-primary">Green Resources</span>
+                </a>
+                
+                <!-- Back Link -->
+                <a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Volver</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Terms of Service Content -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto max-w-7xl px-8 md:px-16">
+            <div class="policy-content">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-4">
+                    Términos de Servicio
+                </h1>
+                <p class="text-lg text-gray-600 mb-12">
+                    Última actualización: Noviembre 2024
+                </p>
+
+                <!-- Introduction Section -->
+                <div class="policy-section">
+                    <h2>1. Introducción</h2>
+                    <p>
+                        Bienvenido a Recicladora Green Resources ("Empresa", "nosotros", "nuestro" o "nos"). Estos Términos de Servicio ("Términos") rigen el uso de nuestro sitio web, aplicaciones móviles y servicios de reciclaje (colectivamente, los "Servicios").
+                    </p>
+                    <p>
+                        Al acceder y usar nuestros Servicios, usted acepta estar vinculado por estos Términos. Si no está de acuerdo con cualquier parte de estos Términos, entonces no podrá acceder a nuestros Servicios. Estos Términos se aplican a todos los visitantes, usuarios y otras personas que acceden a nuestros Servicios.
+                    </p>
+                    <p>
+                        Por favor, lea estos Términos cuidadosamente. Si tiene alguna pregunta sobre estos Términos, contáctenos antes de usar nuestros Servicios.
+                    </p>
+                </div>
+
+                <!-- User Agreements Section -->
+                <div class="policy-section">
+                    <h2>2. Acuerdos de Usuario</h2>
+                    
+                    <h3>2.1 Elegibilidad</h3>
+                    <p>
+                        Al usar nuestros Servicios, usted declara y garantiza que: (a) tiene al menos 18 años de edad o la edad de mayoría legal en su jurisdicción; (b) tiene autoridad legal para celebrar estos Términos; (c) no es una persona sancionada o restringida por ningún gobierno; y (d) no ha sido condenado por un delito grave.
+                    </p>
+
+                    <h3>2.2 Registro de Cuenta</h3>
+                    <p>
+                        Si crea una cuenta con nosotros, usted es responsable de mantener la confidencialidad de su información de cuenta y contraseña. Usted acepta ser responsable de toda la actividad que ocurra bajo su cuenta. Debe notificarnos inmediatamente de cualquier uso no autorizado de su cuenta o cualquier otra violación de seguridad.
+                    </p>
+
+                    <h3>2.3 Información Precisa</h3>
+                    <p>
+                        Usted acepta proporcionar información precisa, actual y completa durante el registro y en todas las transacciones. Usted acepta actualizar su información para mantenerla precisa y completa. Nos reservamos el derecho de suspender o terminar cuentas con información falsa o incompleta.
+                    </p>
+
+                    <h3>2.4 Licencia de Uso</h3>
+                    <p>
+                        Sujeto a su cumplimiento de estos Términos, le otorgamos una licencia limitada, no exclusiva, no transferible y revocable para acceder y usar nuestros Servicios solo para propósitos personales y no comerciales, a menos que se haya acordado lo contrario por escrito.
+                    </p>
+                </div>
+
+                <!-- Acceptable Use Section -->
+                <div class="policy-section">
+                    <h2>3. Uso Aceptable</h2>
+                    
+                    <h3>3.1 Conducta Prohibida</h3>
+                    <p>
+                        Usted acepta no usar nuestros Servicios para:
+                    </p>
+                    <ul>
+                        <li>Violar cualquier ley, regulación o derecho de terceros aplicable</li>
+                        <li>Transmitir material ofensivo, abusivo, difamatorio, obsceno o de otro modo objetable</li>
+                        <li>Acosar, amenazar, intimidar o causar angustia emocional a otros usuarios</li>
+                        <li>Interferir con el funcionamiento normal de nuestros Servicios</li>
+                        <li>Intentar obtener acceso no autorizado a nuestros sistemas</li>
+                        <li>Usar herramientas de minería de datos o scrapers en nuestro sitio web</li>
+                        <li>Enviar spam, correos no solicitados o mensajes maliciosos</li>
+                        <li>Participar en cualquier forma de fraude o estafa</li>
+                        <li>Infringir derechos de propiedad intelectual</li>
+                        <li>Usar nuestros Servicios para fines comerciales sin autorización expresa</li>
+                    </ul>
+
+                    <h3>3.2 Responsabilidad del Usuario</h3>
+                    <p>
+                        Usted es completamente responsable de todo el contenido que carga, publica o transmite a través de nuestros Servicios. Usted garantiza que posee o tiene los derechos necesarios para todo el contenido que proporciona y que dicho contenido no viola estos Términos ni derechos de terceros.
+                    </p>
+
+                    <h3>3.3 Materiales del Usuario</h3>
+                    <p>
+                        Al enviar materiales para reciclaje a través de nuestros Servicios, usted declara que: (a) los materiales son legales y seguros para reciclar; (b) los materiales no contienen sustancias peligrosas no declaradas; (c) usted tiene autoridad para entregar los materiales; y (d) la entrega no viola ninguna ley aplicable.
+                    </p>
+                </div>
+
+                <!-- Limitation of Liability Section -->
+                <div class="policy-section">
+                    <h2>4. Limitación de Responsabilidad</h2>
+                    
+                    <h3>4.1 Descargo de Responsabilidad</h3>
+                    <p>
+                        NUESTROS SERVICIOS SE PROPORCIONAN "TAL CUAL" Y "SEGÚN DISPONIBILIDAD" SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS. RECHAZAMOS TODAS LAS GARANTÍAS, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, APTITUD PARA UN PROPÓSITO PARTICULAR E INCUMPLIMIENTO DE DERECHOS DE TERCEROS.
+                    </p>
+
+                    <h3>4.2 Limitación de Daños</h3>
+                    <p>
+                        EN NINGÚN CASO SEREMOS RESPONSABLES POR DAÑOS INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES O PUNITIVOS, INCLUYENDO PÉRDIDA DE GANANCIAS, PÉRDIDA DE DATOS O PÉRDIDA DE USO, INCLUSO SI HEMOS SIDO INFORMADOS DE LA POSIBILIDAD DE TALES DAÑOS.
+                    </p>
+
+                    <h3>4.3 Límite de Responsabilidad</h3>
+                    <p>
+                        NUESTRA RESPONSABILIDAD TOTAL ANTE USTED POR CUALQUIER RECLAMO BAJO ESTOS TÉRMINOS NO EXCEDERÁ LA CANTIDAD TOTAL QUE USTED HA PAGADO A NOSOTROS EN LOS ÚLTIMOS DOCE MESES, O CIEN DÓLARES (USD $100), LO QUE SEA MENOR.
+                    </p>
+
+                    <h3>4.4 Disponibilidad del Servicio</h3>
+                    <p>
+                        No garantizamos que nuestros Servicios serán ininterrumpidos, seguros o libres de errores. No somos responsables por interrupciones, demoras, fallas de transmisión o cualquier otra falla en la entrega de nuestros Servicios.
+                    </p>
+
+                    <h3>4.5 Contenido de Terceros</h3>
+                    <p>
+                        Nuestros Servicios pueden contener enlaces a sitios web de terceros y contenido de terceros. No somos responsables por la precisión, integridad, seguridad o legalidad de dicho contenido. Su acceso a sitios de terceros está sujeto a los términos y condiciones de esos sitios.
+                    </p>
+                </div>
+
+                <!-- Indemnification Section -->
+                <div class="policy-section">
+                    <h2>5. Indemnización</h2>
+                    <p>
+                        Usted acepta indemnizar, defender y mantener indemne a Green Resources, sus directores, empleados y agentes de cualquier reclamación, demanda, pérdida, responsabilidad, daño, costo o gasto (incluyendo honorarios legales razonables) que surja de o esté relacionado con:
+                    </p>
+                    <ul>
+                        <li>Su uso de nuestros Servicios</li>
+                        <li>Su incumplimiento de estos Términos</li>
+                        <li>Su violación de derechos de terceros</li>
+                        <li>El contenido que usted proporciona</li>
+                        <li>Sus acciones u omisiones</li>
+                    </ul>
+                </div>
+
+                <!-- Intellectual Property Section -->
+                <div class="policy-section">
+                    <h2>6. Propiedad Intelectual</h2>
+                    
+                    <h3>6.1 Derechos de Green Resources</h3>
+                    <p>
+                        Todos los contenidos en nuestros Servicios, incluyendo texto, gráficos, logotipos, imágenes, clips de audio, clips de video y software, son propiedad de Green Resources o sus proveedores de contenido y están protegidos por leyes de derechos de autor internacionales.
+                    </p>
+
+                    <h3>6.2 Uso Permitido</h3>
+                    <p>
+                        Puede descargar o imprimir una copia razonable de los materiales (información, software, etc.) en nuestros Servicios solo para su uso personal y no comercial, siempre que:
+                    </p>
+                    <ul>
+                        <li>No elimine ni altere ningún aviso de derechos de autor, marca registrada u otro aviso de propiedad</li>
+                        <li>No reproduzca, duplique, copie, venda, revenda ni explote ningún material para propósitos comerciales</li>
+                        <li>No transfiera los materiales a otra persona o "espeje" los materiales en ningún otro servidor</li>
+                    </ul>
+
+                    <h3>6.3 Infracciones de Derechos de Autor</h3>
+                    <p>
+                        Si cree que algún contenido en nuestros Servicios infringe sus derechos de autor, contáctenos inmediatamente con una notificación detallada que incluya: (a) su nombre y información de contacto; (b) una descripción del trabajo protegido por derechos de autor; (c) la ubicación del contenido presuntamente infractor; y (d) una declaración bajo pena de perjurio de que cree que el uso es infractor.
+                    </p>
+                </div>
+
+                <!-- Termination Section -->
+                <div class="policy-section">
+                    <h2>7. Terminación</h2>
+                    
+                    <h3>7.1 Terminación por Usted</h3>
+                    <p>
+                        Puede terminar su cuenta en cualquier momento contactándonos. Tras la terminación, su derecho a usar nuestros Servicios cesará inmediatamente.
+                    </p>
+
+                    <h3>7.2 Terminación por Nosotros</h3>
+                    <p>
+                        Podemos suspender o terminar su cuenta y acceso a nuestros Servicios en cualquier momento, con o sin causa, con o sin notificación previa. Las causas para terminación incluyen pero no se limitan a:
+                    </p>
+                    <ul>
+                        <li>Violación de estos Términos</li>
+                        <li>Conducta ilegal o inapropiada</li>
+                        <li>Falta de pago de servicios adeudados</li>
+                        <li>Inactividad prolongada</li>
+                        <li>Solicitud de ley o regulación</li>
+                    </ul>
+
+                    <h3>7.3 Efecto de la Terminación</h3>
+                    <p>
+                        Tras la terminación, su derecho a acceder a nuestros Servicios cesará inmediatamente. Las disposiciones de estos Términos que por su naturaleza deban sobrevivir a la terminación, incluyendo Limitación de Responsabilidad, Indemnización e Propiedad Intelectual, continuarán en vigor.
+                    </p>
+                </div>
+
+                <!-- Modifications Section -->
+                <div class="policy-section">
+                    <h2>8. Modificaciones de los Términos</h2>
+                    <p>
+                        Nos reservamos el derecho de modificar estos Términos en cualquier momento. Si realizamos cambios materiales, notificaremos a los usuarios registrados por correo electrónico o mediante un aviso prominente en nuestro sitio web. Su uso continuado de nuestros Servicios después de tales modificaciones constituye su aceptación de los Términos revisados.
+                    </p>
+                </div>
+
+                <!-- Governing Law Section -->
+                <div class="policy-section">
+                    <h2>9. Ley Aplicable y Resolución de Disputas</h2>
+                    
+                    <h3>9.1 Ley Aplicable</h3>
+                    <p>
+                        Estos Términos se regirán por y se interpretarán de conformidad con las leyes de la República Dominicana, sin tener en cuenta sus principios de conflicto de leyes.
+                    </p>
+
+                    <h3>9.2 Resolución de Disputas</h3>
+                    <p>
+                        Cualquier disputa, reclamo o controversia que surja de o esté relacionada con estos Términos o nuestros Servicios será resuelta mediante arbitraje vinculante, excepto que usted puede presentar una demanda en los tribunales ordinarios si así lo desea. El arbitraje será conducido de conformidad con las reglas de arbitraje aplicables y será presenciado por un árbitro imparcial.
+                    </p>
+
+                    <h3>9.3 Renuncia a Demanda Colectiva</h3>
+                    <p>
+                        Usted acepta que cualquier arbitraje o procedimiento legal será conducido de forma individual y no como demanda colectiva o representativa.
+                    </p>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div class="policy-section">
+                    <h2>10. Información de Contacto</h2>
+                    <p>
+                        Si tiene preguntas sobre estos Términos de Servicio, contáctenos en:
+                    </p>
+                    <div class="bg-soft-lavender rounded-lg p-6 mt-4">
+                        <p class="font-semibold text-gray-900 mb-2">Recicladora Green Resources</p>
+                        <p class="text-gray-700 mb-2">
+                            <strong>Email:</strong> <a href="mailto:info@recicladora.com.do" class="text-primary hover:underline">info@recicladora.com.do</a>
+                        </p>
+                        <p class="text-gray-700 mb-2">
+                            <strong>Horario de Atención:</strong> Lunes - Viernes: 8:00 AM - 6:00 PM
+                        </p>
+                        <p class="text-gray-700">
+                            <strong>Sitio Web:</strong> <a href="https://recicladora.com.do" class="text-primary hover:underline">https://recicladora.com.do</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entire Agreement Section -->
+                <div class="policy-section">
+                    <h2>11. Acuerdo Completo</h2>
+                    <p>
+                        Estos Términos constituyen el acuerdo completo entre usted y Green Resources con respecto a nuestros Servicios y reemplaza todos los acuerdos, negociaciones y discusiones anteriores, ya sean escritas u orales. Si alguna disposición de estos Términos es inválida o inaplicable, las disposiciones restantes continuarán en vigor.
+                    </p>
+                </div>
+
+                <!-- Severability Section -->
+                <div class="policy-section">
+                    <h2>12. Divisibilidad</h2>
+                    <p>
+                        Si alguna disposición de estos Términos es declarada inválida, ilegal o inaplicable por un tribunal competente, tal disposición será modificada en la medida mínima necesaria para hacerla válida, o si no es posible, será anulada, y las disposiciones restantes continuarán en vigor sin cambios.
+                    </p>
+                </div>
+
+                <!-- Waiver Section -->
+                <div class="policy-section">
+                    <h2>13. Renuncia</h2>
+                    <p>
+                        La falta de Green Resources en hacer cumplir cualquier derecho o disposición de estos Términos no constituye una renuncia a tal derecho o disposición. La renuncia a cualquier violación no constituye una renuncia a ninguna otra violación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
+        <div class="container mx-auto max-w-7xl px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: About -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold text-white">Green Resources</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Soluciones de reciclaje responsable para un futuro sostenible. Transformamos residuos en recursos valiosos.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t#features" class="footer-link text-sm">Características</a></li>
+                        <li><a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t#benefits" class="footer-link text-sm">Beneficios</a></li>
+                        <li><a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t#testimonials" class="footer-link text-sm">Testimonios</a></li>
+                        <li><a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t#faq" class="footer-link text-sm">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Legal -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="footer-link text-sm">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="footer-link text-sm">Términos de Servicio</a></li>
+                        <li><a href="blog.html" class="footer-link text-sm">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contacto</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-sm text-gray-400">Email</p>
+                                <a href="mailto:info@recicladora.com.do" class="text-white font-medium hover:text-accent transition-colors">info@recicladora.com.do</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-sm text-gray-400">Horario</p>
+                                <p class="text-white font-medium">Lunes - Viernes: 8:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-gray-800 pt-12">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-400 text-center md:text-right">
+                        © 2025 Recicladora Green Resources. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
