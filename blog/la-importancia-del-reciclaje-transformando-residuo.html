@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recicladora Green Resources - Soluciones ecológicas responsables para un futuro sostenible. Reduce residuos, salva el planeta, crea un futuro verde.">
+    <meta name="keywords" content="reciclaje, sostenibilidad, medio ambiente, recicladora, soluciones ecológicas">
+    <meta name="author" content="Green Resources">
+    <meta name="theme-color" content="#5B4BFF">
+    <title>Recicladora Green Resources | Reciclaje Responsable para un Futuro Sostenible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B68FF 100%);
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(135deg, #00E5A8 0%, #00D494 100%);
+        }
+        
+        .text-primary {
+            color: #5B4BFF;
+        }
+        
+        .text-accent {
+            color: #00E5A8;
+        }
+        
+        .bg-soft-lavender {
+            background-color: #EEF0FF;
+        }
+        
+        .bg-primary {
+            background-color: #5B4BFF;
+        }
+        
+        .bg-accent {
+            background-color: #00E5A8;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4B3BEF;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.3);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #5B4BFF;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #5B4BFF;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #EEF0FF;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 50px rgba(91, 75, 255, 0.15);
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-icon.rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            transition: all 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .faq-answer:not(.hidden) {
+            max-height: 500px;
+            padding-top: 16px;
+        }
+        
+        .faq-answer.hidden {
+            display: none;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #F8F9FF 0%, #EEF0FF 100%);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .star-rating {
+            display: flex;
+            gap: 4px;
+            color: #FFD700;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            line-height: 1.75;
+        }
+        
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background-color: #EEF0FF;
+        }
+        
+        .icon-box svg {
+            width: 28px;
+            height: 28px;
+            color: #5B4BFF;
+            stroke-width: 1.5;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.95) 0%, rgba(123, 104, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=600&fit=crop') center/cover;
+            background-blend-mode: overlay;
+            color: white;
+        }
+        
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease-out;
+        }
+        
+        .footer-link:hover {
+            color: #5B4BFF;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container mx-auto max-w-7xl px-8 md:px-16 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-primary">Green Resources</span>
+                </a>
+                
+                <!-- Back Button -->
+                <a href="https://RonAdames.github.io/recicladora-green-resaources-2025-11-24-bwu3t/blog.html" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">
+                    ← Atrás
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Blog Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-16">
+        <article class="prose prose-lg max-w-none">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">La Importancia del Reciclaje: Transformando Residuos en Oportunidades para un Futuro Sostenible</h1>
+            
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=675&fit=crop&q=80" alt="Trabajadores clasificando materiales reciclables en una instalación moderna de reciclaje" class="w-full rounded-lg shadow-lg mb-8">
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                En la actualidad, el reciclaje se ha convertido en una necesidad imperante para nuestro planeta. Cada año, generamos millones de toneladas de residuos que, si no se gestionan adecuadamente, causan daños irreparables al medio ambiente. El reciclaje no es solo un acto de responsabilidad ambiental, sino una inversión en el futuro de nuestras comunidades, economías y generaciones venideras. Recicladora Green Resources se dedica a transformar esta realidad, convirtiendo residuos en recursos valiosos y contribuyendo activamente a la construcción de una economía circular y sostenible.
+            </p>
+            
+            <p class="mb-6 leading-relaxed text-gray-700">
+                En este artículo, exploraremos en profundidad la importancia del reciclaje, sus beneficios ambientales y económicos, y cómo empresas como Green Resources están revolucionando la industria del reciclaje mediante tecnología innovadora y compromiso social.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">¿Por Qué es Crucial el Reciclaje en el Mundo Moderno?</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                La crisis de residuos a nivel mundial ha alcanzado proporciones alarmantes. Según datos de organizaciones ambientales internacionales, aproximadamente 2,000 millones de toneladas de residuos sólidos se generan anualmente en todo el planeta. Sin medidas efectivas de reciclaje, estos residuos terminan en vertederos, incineradores o, peor aún, en nuestros océanos y ecosistemas naturales. El reciclaje emerge como una solución fundamental para mitigar esta crisis.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                La industria del reciclaje no solo aborda un problema ambiental, sino que también representa una oportunidad económica significativa. Al reciclar materiales, reducimos la necesidad de extraer nuevas materias primas, lo que disminuye los costos de producción y crea empleos verdes en comunidades de todo el mundo. El reciclaje es, fundamentalmente, una inversión inteligente en la sostenibilidad económica y ambiental.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Impacto Ambiental del Reciclaje</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                El reciclaje tiene un impacto ambiental profundo y multifacético. Cuando reciclamos materiales como aluminio, plástico, papel y vidrio, evitamos que estos terminen en vertederos donde pueden tardar cientos de años en descomponerse. Además, el reciclaje reduce significativamente las emisiones de gases de efecto invernadero asociadas con la extracción y procesamiento de nuevas materias primas.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Por ejemplo, reciclar una tonelada de aluminio consume aproximadamente 95% menos energía que producir aluminio nuevo desde bauxita virgen. Esta eficiencia energética se traduce directamente en una reducción de emisiones de carbono. De manera similar, el reciclaje de plástico evita que millones de toneladas de desechos plásticos contaminen nuestros océanos, protegiendo la vida marina y los ecosistemas acuáticos.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Conservación de Recursos Naturales</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Nuestro planeta posee recursos naturales limitados. La extracción descontrolada de materias primas no solo agota estas reservas, sino que también causa devastación ambiental mediante la deforestación, la minería destructiva y la contaminación del agua. El reciclaje permite que aprovechemos los materiales ya existentes, reduciendo la presión sobre los ecosistemas naturales.
+            </p>
+
+            <ul class="list-disc list-inside mb-6 space-y-2">
+                <li class="text-gray-700"><strong>Conservación de bosques:</strong> El reciclaje de papel reduce la necesidad de talar árboles, preservando ecosistemas forestales vitales para la biodiversidad y la regulación del clima.</li>
+                <li class="text-gray-700"><strong>Protección de minerales:</strong> Al reciclar metales, evitamos la minería a gran escala que contamina agua subterránea y destruye hábitats naturales.</li>
+                <li class="text-gray-700"><strong>Ahorro de agua:</strong> La producción de materiales reciclados requiere significativamente menos agua que la producción de materiales vírgenes.</li>
+                <li class="text-gray-700"><strong>Preservación de biodiversidad:</strong> Menos extracción de recursos significa menos perturbación de ecosistemas y mayor protección para especies en peligro de extinción.</li>
+            </ul>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">Beneficios Económicos del Reciclaje</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Más allá de sus beneficios ambientales, el reciclaje es un motor económico poderoso. La industria del reciclaje genera millones de empleos en todo el mundo, desde trabajadores en plantas de procesamiento hasta especialistas en logística y gestión ambiental. Estos empleos suelen ser locales, beneficiando directamente a las comunidades donde operan.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Las empresas que adoptan prácticas de reciclaje también experimentan beneficios económicos directos. Al reducir la cantidad de residuos enviados a vertederos, disminuyen los costos de disposición de basura. Además, muchos materiales reciclables tienen valor comercial, permitiendo que las empresas generen ingresos adicionales. En el caso de Green Resources, nuestros clientes no solo reducen gastos operativos, sino que también generan ingresos al vender materiales reciclables.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Creación de Empleos Verdes</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                La industria del reciclaje es un generador significativo de empleo. Se estima que por cada empleo en la industria de residuos tradicional, el reciclaje crea cuatro empleos. Estos trabajos van desde operadores de maquinaria en plantas de procesamiento, hasta ingenieros especializados en tecnología de reciclaje, coordinadores de programas de recolección, y especialistas en logística.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Estos empleos verdes ofrecen salarios competitivos y oportunidades de desarrollo profesional. Además, contribuyen a la formación de una fuerza laboral capacitada en tecnologías sostenibles, preparando a las comunidades para la economía del futuro. En Recicladora Green Resources, nuestro equipo está compuesto por profesionales dedicados que creen en el poder transformador del reciclaje.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">Tecnología Innovadora en el Reciclaje Moderno</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                La tecnología ha revolucionado la industria del reciclaje, permitiendo que sea más eficiente, seguro y rentable. Los sistemas de clasificación automática utilizan inteligencia artificial y sensores avanzados para separar materiales con precisión sin igual. Estas máquinas pueden procesar toneladas de residuos diariamente, identificando y clasificando diferentes tipos de plástico, metal y papel en cuestión de segundos.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Otra innovación crucial es la tecnología de procesamiento que transforma materiales reciclados en nuevas materias primas de alta calidad. Los sistemas de trituración, compresión y fusión modernos permiten que los materiales reciclados sean prácticamente indistinguibles de los materiales vírgenes, abriendo nuevas posibilidades para su reutilización en industrias exigentes como la automotriz y la aeroespacial.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                En Green Resources, invertimos continuamente en tecnología de punta para garantizar que nuestros procesos de reciclaje sean los más eficientes y respetuosos con el medio ambiente. Nuestras instalaciones cuentan con sistemas de monitoreo en tiempo real que optimizan cada etapa del proceso de reciclaje, desde la recolección hasta el procesamiento final.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Sistemas de Clasificación Automática</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Los sistemas de clasificación automática representan un hito en la eficiencia del reciclaje. Equipados con cámaras de alta resolución, sensores infrarrojo y algoritmos de inteligencia artificial, estos sistemas pueden identificar y separar diferentes materiales con una precisión superior al 98%. Esta tecnología no solo mejora la calidad de los materiales reciclados, sino que también reduce significativamente el tiempo de procesamiento.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                La implementación de estos sistemas ha permitido que instalaciones como la de Green Resources procesen volúmenes sin precedentes de residuos, contribuyendo a una reducción masiva de desechos en vertederos. Además, estos sistemas son más seguros para los trabajadores, reduciendo la necesidad de manipulación manual de residuos potencialmente peligrosos.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">Desafíos y Soluciones en la Industria del Reciclaje</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                A pesar de los avances significativos, la industria del reciclaje enfrenta desafíos importantes. Uno de los principales es la contaminación de flujos de reciclaje, donde materiales incompatibles se mezclan, reduciendo la calidad de los materiales reciclados. Otro desafío es la falta de infraestructura de reciclaje en muchas regiones, lo que significa que grandes cantidades de residuos potencialmente reciclables terminan en vertederos.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                La educación del consumidor es otro aspecto crítico. Muchas personas no saben qué materiales pueden reciclarse o cómo prepararlos adecuadamente. Esto resulta en una baja tasa de reciclaje y en la contaminación de los flujos de reciclaje existentes. Green Resources aborda estos desafíos mediante educación comunitaria, asesoría personalizada a empresas, y la implementación de sistemas de recolección eficientes.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                La viabilidad económica del reciclaje también es un desafío. Los precios de los materiales reciclados fluctúan con los mercados internacionales, lo que puede hacer que el reciclaje sea menos rentable en ciertos períodos. Sin embargo, empresas innovadoras como Green Resources han desarrollado modelos de negocio que garantizan rentabilidad incluso en mercados volátiles, mediante diversificación de servicios y eficiencia operativa.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Soluciones Innovadoras</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Las soluciones innovadoras están emergiendo para abordar estos desafíos. La economía circular, un modelo que reimagina los procesos de producción y consumo para minimizar residuos, está ganando tracción global. En este modelo, los productos se diseñan con el reciclaje en mente, facilitando que los materiales se recuperen y reutilicen indefinidamente.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Las asociaciones público-privadas también están jugando un papel crucial. Gobiernos y empresas trabajan juntos para establecer infraestructura de reciclaje, implementar políticas de responsabilidad extendida del productor, y crear mercados para materiales reciclados. Green Resources participa activamente en estas iniciativas, colaborando con gobiernos locales y organizaciones comunitarias para expandir el acceso al reciclaje.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">El Rol de las Empresas en la Revolución del Reciclaje</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Las empresas tienen una responsabilidad crucial en la promoción del reciclaje. Desde fabricantes que diseñan productos reciclables, hasta minoristas que implementan programas de recogida, y empresas de reciclaje que procesan residuos, cada actor en la cadena de suministro juega un papel vital. La responsabilidad corporativa no es solo un concepto ético, sino una necesidad comercial en un mundo cada vez más consciente del medio ambiente.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Los consumidores están ejerciendo presión sobre las empresas para que adopten prácticas sostenibles. Estudios muestran que la mayoría de los consumidores prefiere comprar de empresas comprometidas con la sostenibilidad. Esto ha llevado a que muchas corporaciones grandes implementen objetivos ambiciosos de reducción de residuos y reciclaje. Green Resources apoya a estas empresas proporcionando soluciones de reciclaje integral que no solo cumplen con regulaciones ambientales, sino que también mejoran su reputación corporativa.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                La transparencia es otro aspecto crucial. Las empresas que comunican claramente sus esfuerzos de reciclaje y su impacto ambiental ganan la confianza de consumidores y inversores. Green Resources proporciona reportes detallados del impacto ambiental a sus clientes, demostrando exactamente cuánto se ha reciclado y qué emisiones de carbono se han evitado.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Compromiso Corporativo con la Sostenibilidad</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Las empresas líderes están estableciendo metas ambiciosas. Muchas han comprometido a alcanzar cero residuos a vertederos en los próximos años, lo que requiere una colaboración estrecha con socios de reciclaje confiables. Este compromiso no solo beneficia al medio ambiente, sino que también genera eficiencias operativas significativas y atrae a empleados talentosos que valoran el propósito corporativo.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Recicladora Green Resources se enorgullece de ser el socio preferido de empresas que buscan alcanzar estos objetivos ambiciosos. Nuestro enfoque integral, que combina tecnología avanzada con servicio excepcional y compromiso ambiental genuino, ha permitido que cientos de empresas reduzcan sus residuos y aumenten su impacto positivo.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">Perspectivas Futuras: Hacia una Economía Circular Completa</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                El futuro del reciclaje es prometedor. A medida que la tecnología continúa avanzando y la conciencia ambiental crece, esperamos ver una transformación fundamental en cómo manejamos los residuos. La economía circular completa, donde prácticamente todos los materiales se reciclan indefinidamente, ya no es un sueño distante, sino una meta alcanzable.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Los gobiernos están implementando políticas más fuertes para apoyar el reciclaje. Desde impuestos a los plásticos de un solo uso, hasta requisitos de diseño para reciclabilidad, estas políticas están cambiando el panorama empresarial. La Unión Europea, por ejemplo, ha establecido ambiciosos objetivos de reciclaje que están impulsando la innovación en toda la región.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                En Green Resources, estamos invirtiendo en investigación y desarrollo para anticipar estas tendencias futuras. Nuestro equipo está explorando nuevas tecnologías de reciclaje, incluyendo métodos para procesar materiales complejos como los plásticos de múltiples capas y los compuestos de fibra de carbono. Creemos que el futuro del reciclaje no solo será más eficiente, sino también más inclusivo, accesible y beneficioso para todas las comunidades.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Innovaciones Emergentes</h3>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Varias innovaciones emocionantes están en el horizonte. El reciclaje químico, que descompone los plásticos hasta sus componentes moleculares para crear nuevos plásticos de calidad virgen, está madurando rápidamente. Esta tecnología promete resolver el problema de los plásticos que actualmente no pueden reciclarse mecánicamente.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                La inteligencia artificial y el aprendizaje automático están mejorando continuamente los sistemas de clasificación y procesamiento. Estos sistemas no solo se vuelven más precisos con el tiempo, sino que también pueden adaptarse a nuevos tipos de materiales y cambios en los flujos de residuos. Esto significa que el reciclaje se volverá cada vez más eficiente y rentable.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                La blockchain y otras tecnologías de seguimiento están permitiendo una trazabilidad completa de los materiales reciclados. Los consumidores podrán ver exactamente qué sucede con sus residuos reciclados, desde la recolección hasta la transformación en nuevos productos. Esta transparencia aumentará la confianza en el sistema de reciclaje y motivará mayor participación.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">Cómo Puedes Contribuir al Movimiento de Reciclaje</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Cada individuo tiene el poder de contribuir a la revolución del reciclaje. Comenzar es simple: primero, edúcate sobre qué se puede reciclar en tu área. Los programas de reciclaje varían según la ubicación, así que es importante conocer las directrices locales. Segundo, sé diligente en la preparación de tus materiales reciclables. Asegúrate de que estén limpios, secos y correctamente clasificados.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Tercero, considera reducir y reutilizar antes de reciclar. La jerarquía de residuos establece que prevenir la generación de residuos es más deseable que reciclar. Compra productos con empaques mínimos, reutiliza bolsas de compras, y repara artículos en lugar de desecharlos. Cuando recicles, hazlo correctamente para no contaminar los flujos de reciclaje.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                Si eres propietario de una empresa, asociarte con un proveedor de reciclaje confiable como Green Resources es fundamental. Implementa un programa de reciclaje integral en tu organización y comunica tus esfuerzos a clientes y empleados. Finalmente, apoya políticas públicas que promuevan la sostenibilidad. Vota por líderes comprometidos con el medio ambiente y participa en iniciativas comunitarias de reciclaje.
+            </p>
+
+            <h3 class="text-2xl font-medium mt-8 mb-3 text-gray-800">Pasos Prácticos para Empresas</h3>
+            
+            <ul class="list-decimal list-inside mb-6 space-y-2">
+                <li class="text-gray-700"><strong>Evaluar tu generación actual de residuos:</strong> Realiza una auditoría completa de residuos para entender qué estás desechando y cuánto.</li>
+                <li class="text-gray-700"><strong>Establecer objetivos ambiciosos:</strong> Define metas claras de reducción de residuos y reciclaje, como alcanzar cero residuos a vertederos en 5 años.</li>
+                <li class="text-gray-700"><strong>Implementar sistemas de recolección:</strong> Establece contenedores claramente etiquetados para diferentes tipos de reciclaje en tu oficina o instalación.</li>
+                <li class="text-gray-700"><strong>Educar a tu equipo:</strong> Proporciona capacitación sobre la importancia del reciclaje y cómo hacerlo correctamente.</li>
+                <li class="text-gray-700"><strong>Asociarte con profesionales:</strong> Trabaja con empresas especializadas como Green Resources para optimizar tu programa de reciclaje.</li>
+                <li class="text-gray-700"><strong>Medir y comunicar tu impacto:</strong> Utiliza reportes de impacto ambiental para comunicar tus logros a stakeholders.</li>
+            </ul>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-4 text-gray-900">Conclusión: Un Futuro Construido sobre Reciclaje Responsable</h2>
+            
+            <p class="mb-4 leading-relaxed text-gray-700">
+                El reciclaje no es simplemente una actividad ambiental, sino un componente fundamental de la sostenibilidad moderna. Reduce residuos, conserva recursos naturales, disminuye emisiones de carbono, crea empleos, y genera oportunidades económicas. En un mundo donde los recursos son finitos y la población continúa creciendo, el reciclaje es no solo importante, sino absolutamente esencial.
+            </p>
+
+            <p class="mb-4 leading-relaxed text-gray-700">
+                Recicladora Green Resources está comprometida a liderar esta transformación. Mediante tecnología innovadora, servicio excepcional, y un compromiso genuino con la sostenibilidad, ayudamos a empresas, comunidades e individuos a convertir sus residuos en recursos valiosos. Creemos que juntos podemos construir una economía circular donde prácticamente nada se desperdicia y todo tiene valor.
+            </p>
+
+            <p class="mb-6 leading-relaxed text-gray-700">
+                El futuro sostenible que todos anhelamos no sucederá por sí solo. Requiere acción decidida de gobiernos, empresas, organizaciones comunitarias e individuos. El reciclaje es un paso crucial en esa dirección. Cada material que reciclas, cada empresa que implementa un programa de reciclaje integral, y cada política que respalda la sostenibilidad, contribuye a construir ese futuro. Te invitamos a ser parte de esta revolución. Únete a Green Resources en el viaje hacia un planeta más limpio, más verde, y más próspero para todos.
+            </p>
+        </article>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-20 md:py-32 mt-16">
+        <div class="container mx-auto max-w-4xl px-8 md:px-16 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Únete a la Revolución del Reciclaje
+            </h2>
+            <p class="text-lg md:text-xl text-white mb-10 leading-relaxed opacity-95">
+                Transforma tus residuos en recursos valiosos. Comienza tu viaje hacia la sostenibilidad hoy mismo con Green Resources.
+            </p>
+            <a href="https://recicladora.com.do/#contact" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg">
+                Contáctanos Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
+        <div class="container mx-auto max-w-7xl px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: About -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold text-white">Green Resources</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Soluciones de reciclaje responsable para un futuro sostenible. Transformamos residuos en recursos valiosos.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="footer-link text-sm">Características</a></li>
+                        <li><a href="#benefits" class="footer-link text-sm">Beneficios</a></li>
+                        <li><a href="#testimonials" class="footer-link text-sm">Testimonios</a></li>
+                        <li><a href="#faq" class="footer-link text-sm">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Legal -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="footer-link text-sm">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="footer-link text-sm">Términos de Servicio</a></li>
+                        <li><a href="blog.html" class="footer-link text-sm">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contacto</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-sm text-gray-400">Email</p>
+                                <a href="mailto:info@recicladora.com.do" class="text-white font-medium hover:text-accent transition-colors">info@recicladora.com.do</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-sm text-gray-400">Horario</p>
+                                <p class="text-white font-medium">Lunes - Viernes: 8:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-gray-800 pt-12">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors duration-300">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-400 text-center md:text-right">
+                        © 2025 Recicladora Green Resources. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
